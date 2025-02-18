@@ -2,14 +2,121 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #000; /* Set background to black */
+    color: #fff; /* Set text to white */
     text-align: center;
 }
 
-header {
+nav {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Initially hide the navbar */
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread out the contents evenly */
+    flex-direction: column; /* Align items vertically */
+    transition: right 0.3s ease-in-out;
+}
+
+nav:hover {
+    right: 0; /* Slide out the navbar on hover */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure the ul takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0; /* Reduce the margin to reduce empty space */
+    position: relative;
+    width: 100%; /* Ensure the li takes full width */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0; /* Increase padding for better spacing */
+    transition: color 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+header.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
     background-color: #007bff;
     color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.hero-content .btn:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background-color: #1a1a1a;
+    margin: 20px auto;
     padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .profile img {
@@ -27,17 +134,51 @@ header {
     line-height: 1.6;
 }
 
-.about, .contact {
-    background-color: white;
+.about, .contact, .skills {
+    background-color: #1a1a1a;
     margin: 20px auto;
     padding: 20px;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.skills .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.skills .carousel-item {
+    flex: 0 0 auto;
+    width: 80%;
+    margin: 0 10px;
+    scroll-snap-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.skills .carousel-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.skills .carousel-item h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.skills .carousel-item p {
+    font-size: 16px;
 }
 
 h2 {
-    color: #333;
+    color: #fff;
 }
 
 a {
@@ -54,4 +195,15 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
 }

@@ -7,30 +7,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mohan Mondal</h1>
-        <p>Engineering Student | Nature Enthusiast | Volleyball Player</p>
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#more">More</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Mohan Mondal</h1>
+            <p>Engineering Student | Nature Enthusiast | Volleyball Player</p>
+            <a href="#profile" class="btn">Learn More</a>
+        </div>
     </header>
 
-    <section class="profile">
+    <section id="profile" class="profile card">
         <img src="profilephoto.jpg" alt="Profile Photo">
         <p>Hello! I am Mohan Mondal, a B.Tech Mechanical Engineering student at NIT Durgapur.  
            I am passionate about technology and nature. In my free time, I love playing volleyball.</p>
     </section>
 
-    <section class="about">
+    <section id="about" class="about card">
         <h2>About Me</h2>
         <p>I have a deep interest in sustainable engineering and innovative solutions. 
            My goal is to develop eco-friendly technology that benefits both industry and nature.</p>
     </section>
 
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>Instagram: <a href="https://www.instagram.com/1000.mohan" target="_blank">@1000.mohan</a></p>
-        <p><a href="facebook">facebook</a></p>
-        <p><a href="twiter" >twiter</a></p>
+    <section id="skills" class="skills card">
+        <h2>My Skills</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="html.svg" alt="HTML">
+                <h3>HTML</h3>
+                <p>Proficient in creating structured and semantic web pages using HTML.</p>
+                <p>HTML (HyperText Markup Language) is the foundation of web development, used to create and structure web pages. It defines elements like headings, paragraphs, links, images, and more, allowing browsers to display content properly. Combined with CSS and JavaScript, HTML enables the creation of visually appealing and interactive websites.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="css.svg" alt="CSS">
+                <h3>CSS</h3>
+                <p>Experienced in designing responsive and visually appealing web pages using CSS.</p>
+                <p>CSS (Cascading Style Sheets) is a styling language used to design and enhance the appearance of web pages. It controls layout, colors, fonts, and animations, making websites visually appealing and responsive across different devices. Combined with HTML, CSS ensures a seamless and engaging user experience.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="dsa.svg" alt="DSA">
+                <h3>DSA</h3>
+                <p>Skilled in Data Structures and Algorithms for efficient problem-solving.</p>
+                <p>DSA (Data Structures and Algorithms) is the backbone of efficient programming, helping developers solve problems effectively. Data structures organize and store data, while algorithms provide step-by-step methods to process it. Mastering DSA improves coding skills, optimizes performance, and is essential for technical interviews and software development.</p>
+            </div>
+        </div>
     </section>
-    <section class="profile">
+
+    <section id="more" class="profile card">
         <h2>More</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium esse fugiat doloribus officia repudiandae quos sapiente, nobis delectus pariatur suscipit necessitatibus autem ut rem numquam libero vitae. Molestias, dolorum!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum alias nisi illo tenetur, magnam nemo, accusamus unde explicabo tempore deleniti quam deserunt obcaecati eius tempora commodi similique magni sit!
@@ -38,11 +69,26 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas porro, dicta aliquam non maiores accusamus fuga eaque suscipit architecto perspiciatis ea, deleniti expedita commodi. Nisi ullam distinctio accusamus porro.
        
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nihil obcaecati voluptatum porro placeat! Alias in ad, ipsam rem unde sint similique reiciendis corrupti? Quam atque architecto expedita consequatur accusamus. </p>
-       <img src="groupphoto.jpg" alt="Profile Photo">
+       <img src="groupphoto.jpg" alt="Group Photo">
        <br>
-       <img src="prize.jpg" alt="Profile Photo">
+       <img src="prize.jpg" alt="Prize Photo">
        <br>
-       <img src="silvermadel.jpg" alt="" srcset="">
+       <img src="silvermadel.jpg" alt="Silver Medal Photo">
+    </section>
+
+    <section id="contact" class="contact card">
+        <h2>Contact Me</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/1000.mohan" target="_blank">
+                <img src="instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/1000.mohan" target="_blank">
+                <img src="facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com/1000_mohan" target="_blank">
+                <img src="twitter.svg" alt="Twitter">
+            </a>
+        </div>
     </section>
 
     <footer>
